@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/angular.js"></script>
+
+</head>
+<body ng-app="myModule">
+<div ng-controller="myController">
+    <input type="text" placeholder="Type your message here" ng-model="message" />
+    <br /><br />
+    {{ message }}
+    <button ng-click="alert()">click me</button>
+</div>
+
+
+<script>
+    angular.module("myModule", []).controller("myController",myname);
+
+        function myname($scope) {
+            $scope.message = "AngularJS Tutorial";
+            $scope.alert=function () {
+                alert("hello manasvi");
+
+            }
+
+        }
+
+
+
+</script>
+</body>
+</html>
